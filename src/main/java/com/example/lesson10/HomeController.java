@@ -14,8 +14,6 @@ import javax.validation.Valid;
 @Controller
 public class HomeController {
 
-//  @Autowired tells the compiler to instantiate the repository objectwhen the
-//  application runs, so you don’t have to type out that line so many times!
   @Autowired
   CourseRepository courseRepository;
 
@@ -86,8 +84,6 @@ public class HomeController {
 
   @RequestMapping("/delete/{id}")
   public String delCourse(@PathVariable("id") long id){
-//    System.out.println(id);
-//    courseRepository.delete(courseRepository.findById(id).get());
     courseRepository.deleteById(id);
     return "redirect:/";
   }

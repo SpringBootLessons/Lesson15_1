@@ -13,7 +13,6 @@
       method="post">
     <input type="hidden" th:field="*{id}" />
 
-
     Subject:<select th:field="*{subject}" class="form-control input-md">
             <option th:each="option: ${subjects}"
                     th:value="${option.id}">[[${option.title}]]</option>
